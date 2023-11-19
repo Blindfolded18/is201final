@@ -1,0 +1,240 @@
+html {
+    background-image: url("asset/index-bg.jpg");
+    background-size: cover;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+p {
+    margin: 0;
+    padding: 0;
+}
+
+#diary {
+    height: 95vh;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+#diary-list, #diary-edit {
+    flex: auto;
+    height: 100%;
+
+    margin: 10px;
+
+    border: 100px black;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+#diary-list {
+    width: 30%;
+    overflow-y: scroll;
+}
+
+/*#diary-edit {*/
+/*    background-color: white;*/
+/*    border: 1px solid #ccc;*/
+/*    border-radius: 10px;*/
+/*    padding: 10px;*/
+/*    margin-bottom: 10px;*/
+/*    transition: box-shadow 0.3s ease;*/
+/*}*/
+
+.entry-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.entry-date {
+    font-weight: bold;
+    color: #5d483d;
+}
+
+.delete-icon {
+    display: inline;
+    border: none;
+    background-color: inherit;
+    font-size: inherit;
+    padding: 0;
+    cursor: pointer;
+    color: #a8a8a8;
+    transition: color 0.3s ease;
+}
+
+.delete-icon:hover {
+    color: #5d483d;
+}
+
+.moods {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    margin-top: 10px;
+    min-height: calc(14px + 1em);
+}
+
+.mood {
+    display: flex;
+    align-items: center;
+    border: 1px solid #d3c1ae;
+    border-radius: 10px;
+    padding: 5px;
+    color: #5d483d;
+}
+
+.mood-color {
+    display: inline-block;
+    height: 1em;
+    width: 1em;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+
+.diary-entry:hover {
+    box-shadow: 0 0 8px rgba(93, 72, 61, 1);
+}
+
+.diary-entry {
+    background-color: #fff8f0;
+    border: 1px solid #d3c1ae;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px;
+    transition: box-shadow 0.3s;
+}
+
+#add-entry {
+    display: block;
+    width: calc(100% - 20px);
+    background-color: #ccc4bc;
+    border: 1px solid #d3c1ae;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#add-entry:hover {
+    background-color: #938977;
+    border-color: #938977;
+    color: #fff;
+}
+
+.plus-sign {
+    margin-right: 5px;
+}
+
+#diary-list::-webkit-scrollbar-track {
+    background-color: #f8f0e6;
+    border-radius: 10px;
+}
+
+#diary-list::-webkit-scrollbar-thumb {
+    background-color: #b89c84;
+    border-radius: 10px;
+    border: 3px solid #f8f0e6;
+}
+
+#diary-list::-webkit-scrollbar {
+    width: 12px;
+}
+
+#diary-list::-webkit-scrollbar-thumb:hover {
+    background-color: #a38270;
+}
+
+#diary-edit {
+    width: 70%;
+
+    background-color: #fff8f0;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+    display: flex;
+    flex-direction: column;
+}
+
+#edit-date {
+    width: 100%;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+#edit-date input {
+    width: calc(100% - 20px);
+    padding: 8px;
+}
+
+#edit-moods {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
+.mood-option {
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #e7dfd5;
+    cursor: pointer;
+    transition: all 0.2s;
+    transition-property: background-color, color;
+}
+
+.mood-option.selected {
+    background-color: #b89c84;
+    border: 1px solid #a38270;
+    color: white;
+}
+
+.mood-option:hover {
+    background-color: #a38270;
+}
+
+#edit-note {
+    width: 100%;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+
+    flex-grow: 1;
+}
+
+#edit-note textarea {
+    height: 100%;
+    width: 100%;
+    padding: 8px;
+    resize: none;
+    box-sizing: border-box;
+}
+
+#save-entry {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #b89c84;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+#save-entry:hover {
+    background-color: #a38270;
+}

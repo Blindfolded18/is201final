@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="moods.css">
+    <script src="index.js" defer></script>
+    <script src="moods.js"></script>
+</head>
+<body>
+    <div id="diary">
+        <div id="diary-list">
+            <div class="diary-entry">
+                <div class="entry-header">
+                    <span class="entry-date">March 14, 2023</span>
+                    <button class="delete-icon">🗑</button>
+                </div>
+                <div class="moods">
+                    <span class="mood">
+                        <span class="mood-color happy-mood"></span>
+                        Happy
+                    </span>
+                    <span class="mood">
+                        <span class="mood-color excited-mood"></span>
+                        Excited
+                    </span>
+                </div>
+            </div>
+            <div class="diary-entry">
+                <div class="entry-header">
+                    <span class="entry-date">March 15, 2023</span>
+                    <button class="delete-icon">🗑</button>
+                </div>
+                <div class="moods">
+                    <span class="mood">
+                        <span class="mood-color" style="background-color: red;"></span>
+                        Angry
+                    </span>
+                </div>
+            </div>
+            <button id="add-entry">
+                <span class="plus-sign">✚</span> Add Entry
+            </button>
+        </div>
+        <div id="diary-edit">
+            <label id="edit-date">
+                <input type="date" placeholder="MM-DD-YYYY">
+            </label>
+            <div id="edit-moods">
+            </div>
+            <label id="edit-note">
+                <textarea placeholder="Write your thoughts here..."></textarea>
+            </label>
+            <button id="save-entry">Save Entry</button>
+        </div>
+    </div>
+</body>
+</html>

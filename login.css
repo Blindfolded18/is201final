@@ -1,0 +1,30 @@
+html {
+    background-color: burlywood;
+
+    font-size: 20px;
+    font-family: "Apple SD Gothic Neo", sans-serif;
+}
+
+#account {
+    margin-top: 150px;
+
+    display: flex;
+    justify-items: center;
+    justify-content: space-evenly;
+}
+
+#account div {
+    background-color: white;
+    width: 300px;
+    padding: 30px;
+    border-radius: 50px;
+}
+
+#account * {
+    width: 100%;
+    margin: 1em 0;
+}
+
+#login-prompt {
+    margin: 0 0 1em 0;
+}

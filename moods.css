@@ -1,0 +1,83 @@
+.mood-color.happy-mood {
+    background-color: #FFD700;
+}
+
+.mood-color.sad-mood {
+    background-color: #1E90FF;
+}
+
+.mood-color.angry-mood {
+    background-color: #FF0000;
+}
+
+.mood-color.relaxed-mood {
+    background-color: #008080;
+}
+
+.mood-color.anxious-mood {
+    background-color: #708090;
+}
+
+.mood-color.excited-mood {
+    background-color: #FFA500;
+}
+
+.mood-color.tired-mood {
+    background-color: #000080;
+}
+
+.mood-color.stressed-mood {
+    background-color: #DC143C;
+}
+
+.mood-color.peaceful-mood {
+    background-color: #87CEEB;
+}
+
+.mood-color.confident-mood {
+    background-color: #800080;
+}
+
+.mood-color.bored-mood {
+    background-color: #F5F5DC;
+}
+
+.mood-color.joyful-mood {
+    background-color: #FFC0CB;
+}
+
+.mood-color.in-love-mood {
+    background-color: #FF1493;
+}
+
+.mood-color.grateful-mood {
+    background-color: #FF7F50;
+}
+
+.mood-color.optimistic-mood {
+    background-color: #90EE90;
+}
+
+.mood-color.melancholic-mood {
+    background-color: #90EE90;
+}
+
+.mood-color.surprised-mood {
+    background-color: #00FF00;
+}
+
+.mood-color.hopeful-mood {
+    background-color: #E6E6FA;
+}
+
+.mood-color.nostalgic-mood {
+    background-color: #B76E79;
+}
+
+.mood-color.frustrated-mood {
+    background-color: #B22222;
+}
+
+.mood-color.other-mood {
+    background-color: black;
+}
