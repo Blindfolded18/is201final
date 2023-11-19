@@ -44,44 +44,52 @@ class DiaryEntry {
 addEntryElem.addEventListener("click", () => {
     const diaryEntry = new DiaryEntry();
 
+    // create element
     const diaryEntryElem = document.createElement("div");
     diaryEntryElem.classList.add("diary-entry");
-
-    const entryHeaderElem = document.createElement("div");
-    entryHeaderElem.classList.add("entry-header");
-
-    const entryDateElem = document.createElement("span");
-    entryDateElem.classList.add("entry-date");
-    entryDateElem.textContent = diaryEntry.date.toLocaleDateString(
-        undefined,
+    {
+        const entryInfoElem = document.createElement("div");
+        entryInfoElem.classList.add("entry-info");
         {
-            year: 'numeric',
-            month: 'long',
-            day: 'numeric'
-        },
-    );
-    const deleteIconElem = document.createElement("button");
-    deleteIconElem.classList.add("delete-icon");
-    deleteIconElem.textContent = "🗑";
-    deleteIconElem.addEventListener("click", () => {
-        if (confirm("Are you sure to delete this entry?")) {
-            diaryEntryElem.remove();
-            const removeI = diaryEntries.findIndex(entry => entry === diaryEntry);
-            diaryEntries.splice(removeI, 1);
+            const entryDateElem = document.createElement("p");
+            entryDateElem.classList.add("entry-date");
+            entryDateElem.textContent = diaryEntry.date.toLocaleDateString(
+                undefined,
+                {
+                    year: 'numeric',
+                    month: 'long',
+                    day: 'numeric'
+                },
+            );
+            entryInfoElem.appendChild(entryDateElem);
         }
-    });
-    entryHeaderElem.append(entryDateElem, deleteIconElem);
-
-    const moodsElem = document.createElement("div");
-    moodsElem.classList.add("moods");
-
-    diaryEntryElem.append(entryHeaderElem, moodsElem);
-    diaryEntryElem.addEventListener("click", () => {
-        diaryEntry.loadTo(editDateInnerElem, moodOptionElems, editNoteInnerElem);
-    });
+        {
+            const moodsElem = document.createElement("div");
+            moodsElem.classList.add("moods");
+            entryInfoElem.appendChild(moodsElem);
+        }
+        entryInfoElem.addEventListener("click", () => {
+            document.querySelectorAll(".entry-info.selected")
+                .forEach(entryInfoElem => entryInfoElem.classList.remove(SELECTED_CLASS_NAME));
+            entryInfoElem.classList.add(SELECTED_CLASS_NAME);
+            diaryEntry.loadTo(editDateInnerElem, moodOptionElems, editNoteInnerElem);
+        });
+        diaryEntryElem.appendChild(entryInfoElem);
+    }
+    {
+        const deleteEntryElem = document.createElement("button");
+        deleteEntryElem.classList.add("delete-entry");
+        deleteEntryElem.appendChild(getTrashCanElem());
+        deleteEntryElem.addEventListener("click", () => {
+            if (confirm("Are you sure to delete this entry?")) {
+                diaryEntryElem.remove();
+                const removeI = diaryEntries.findIndex(entry => entry === diaryEntry);
+                diaryEntries.splice(removeI, 1);
+            }
+        });
+        diaryEntryElem.appendChild(deleteEntryElem);
+    }
     diaryListElem.insertBefore(diaryEntryElem, addEntryElem);
 
     diaryEntries.push(diaryEntry);
-
-    alert(diaryEntries)
 });
