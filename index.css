@@ -36,15 +36,6 @@ p {
     overflow-y: scroll;
 }
 
-/*#diary-edit {*/
-/*    background-color: white;*/
-/*    border: 1px solid #ccc;*/
-/*    border-radius: 10px;*/
-/*    padding: 10px;*/
-/*    margin-bottom: 10px;*/
-/*    transition: box-shadow 0.3s ease;*/
-/*}*/
-
 .entry-header {
     display: flex;
     justify-content: space-between;
@@ -53,21 +44,6 @@ p {
 
 .entry-date {
     font-weight: bold;
-    color: #5d483d;
-}
-
-.delete-icon {
-    display: inline;
-    border: none;
-    background-color: inherit;
-    font-size: inherit;
-    padding: 0;
-    cursor: pointer;
-    color: #a8a8a8;
-    transition: color 0.3s ease;
-}
-
-.delete-icon:hover {
     color: #5d483d;
 }
 
@@ -96,17 +72,71 @@ p {
     margin-right: 5px;
 }
 
-.diary-entry:hover {
-    box-shadow: 0 0 8px rgba(93, 72, 61, 1);
+.diary-entry {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px;
+    transition: background-color 0.2s;
 }
 
-.diary-entry {
+.entry-info {
     background-color: #fff8f0;
-    border: 1px solid #d3c1ae;
-    border-radius: 10px;
+    border-radius: 1em;
     padding: 10px;
-    margin: 10px;
-    transition: box-shadow 0.3s;
+    flex-grow: 1;
+
+    transition: background-color 0.2s;
+}
+
+.entry-info:hover {
+    background-color: #938977;
+}
+
+.entry-info.selected {
+    background-color: #b89c84;
+}
+
+.entry-info.selected:hover {
+    background-color: #938977;
+}
+
+.entry-info.selected .entry-date {
+    color: #fff8f0;
+}
+
+.entry-info.selected .mood {
+    color: #fff8f0;
+}
+
+.delete-entry {
+    background-color: #fff8f0;
+    display: block;
+    align-self: stretch;
+
+    border: none;
+    border-radius: 1em;
+    margin-left: 8px;
+    cursor: pointer;
+    padding: 10px 5px;
+
+    transition: background-color 0.2s;
+}
+
+.delete-entry:hover {
+    background-color: #938977;
+}
+
+.delete-entry svg {
+    fill: #98816e;
+
+    transition: transform 0.2s;
+    transition-property: background-color;
+}
+
+.delete-entry:hover svg {
+    fill: #fff8f0;
+    transform: scale(1.1);
 }
 
 #add-entry {
@@ -120,7 +150,8 @@ p {
     text-align: center;
     font-weight: bold;
     cursor: pointer;
-    transition: background-color 0.3s ease, color 0.3s ease;
+    transition: transform 0.2s ease;
+    transition-property: background-color, color;
 }
 
 #add-entry:hover {
