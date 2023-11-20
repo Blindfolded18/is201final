@@ -136,22 +136,10 @@ p {
 #add-entry {
     display: block;
     width: calc(100% - 20px);
-    background-color: #ccc4bc;
-    border: 1px solid #d3c1ae;
     border-radius: 10px;
     padding: 10px;
     margin: 10px;
-    text-align: center;
-    font-weight: bold;
     cursor: pointer;
-    transition: transform 0.2s ease;
-    transition-property: background-color, color;
-}
-
-#add-entry:hover {
-    background-color: #938977;
-    border-color: #938977;
-    color: #fff;
 }
 
 .plus-sign {

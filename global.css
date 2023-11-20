@@ -1,0 +1,19 @@
+body {
+    font-family: 'Arial', sans-serif;
+}
+
+button {
+    background-color: #ccc4bc;
+    border: 1px solid #d3c1ae;
+    text-align: center;
+    font-weight: bold;
+
+    transition: transform 0.2s ease;
+    transition-property: background-color, color;
+}
+
+button:hover {
+    background-color: #938977;
+    border-color: #938977;
+    color: #fff;
+}
