@@ -27,7 +27,7 @@ class DiaryEntry {
     note = "";
 
     loadTo(editDateInnerElem, moodOptionElems, editNoteInnerElem) {
-        editDateInnerElem.value = this.date.toISOString().split('T')[0];
+        editDateInnerElem.value = dateToIso(this.date);
         moodOptionElems.forEach(moodOptionElem => moodOptionElem.classList.remove(SELECTED_CLASS_NAME));
         this.moods.forEach(mood => {
             mood.elem.classList.add(SELECTED_CLASS_NAME);
@@ -67,6 +67,14 @@ function dateToVerbose(date) {
             day: 'numeric'
         },
     );
+}
+
+function dateToIso(date) {
+    const year = date.getFullYear();
+    const month = (date.getMonth() + 1).toString().padStart(2, '0');
+    const day = date.getDate().toString().padStart(2, '0');
+
+    return `${year}-${month}-${day}`;
 }
 
 const entryManager = new EntryManager();
