@@ -1,4 +1,5 @@
 const SELECTED_CLASS_NAME = "selected";
+const usernameElem = document.querySelector("#username");
 const editMoodsElem = document.querySelector("#edit-moods");
 const diaryListElem = document.querySelector("#diary-list");
 const addEntryElem = document.querySelector("#add-entry");
@@ -17,6 +18,8 @@ moods.forEach((mood, i, moods) => {
     editMoodsElem.appendChild(moodOptionElem);
     moods[i].elem = moodOptionElem;
 });
+
+usernameElem.textContent = sessionStorage.getItem("username");
 
 class DiaryEntry {
     date = new Date();
