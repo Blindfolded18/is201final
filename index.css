@@ -45,6 +45,10 @@ p {
 
 .utility {
     color: #5d483d;
+    background-color: initial;
+    font-size: initial;
+    font-weight: initial;
+    border: initial;
     margin: 0 5px;
     padding: 5px 10px;
     cursor: pointer;
