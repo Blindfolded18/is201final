@@ -17,8 +17,8 @@ p {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #fff8f0;
-    color: #5d483d;
+    background-color: var(--bar-bg-color);
+    color: var(--bar-text-color);
     padding: 10px 20px;
 }
 
@@ -44,7 +44,7 @@ p {
 }
 
 .utility {
-    color: #5d483d;
+    color: var(--button3-text-color);
     background-color: initial;
     font-size: initial;
     font-weight: initial;
@@ -57,8 +57,8 @@ p {
 }
 
 .utility:hover {
-    background-color: #5d483d;
-    color: #fff8f0;
+    background-color: var(--button3-hover-bg-color);
+    color: var(--button3-hover-text-color);
 }
 
 #diary {
@@ -74,7 +74,7 @@ p {
 
     margin: 10px;
 
-    border: 100px black;
+    border: 100px var(--section1-border-color);
     border-radius: 10px;
     box-sizing: border-box;
     overflow-y: scroll;
@@ -86,7 +86,7 @@ p {
 
 .entry-date {
     font-weight: bold;
-    color: #5d483d;
+    color: var(--text1-text-color);
 }
 
 .moods {
@@ -100,10 +100,10 @@ p {
 .mood {
     display: flex;
     align-items: center;
-    border: 1px solid #d3c1ae;
+    border: 1px solid var(--item1-border-color);
     border-radius: 10px;
     padding: 5px;
-    color: #5d483d;
+    color: var(--item1-text-color);
 }
 
 .mood-color {
@@ -119,11 +119,11 @@ p {
     justify-content: space-between;
     align-items: center;
     margin: 10px;
-    transition: background-color 0.2s;
+    /*transition: background-color 0.2s;*/
 }
 
 .entry-info {
-    background-color: #fff8f0;
+    background-color: var(--item2-bg-color);
     border-radius: 1em;
     padding: 10px;
     flex-grow: 1;
@@ -132,27 +132,27 @@ p {
 }
 
 .entry-info:hover {
-    background-color: #938977;
+    background-color: var(--item2-hover-bg-color);
 }
 
 .entry-info.selected {
-    background-color: #b89c84;
+    background-color: var(--item2-selected-bg-color);
 }
 
 .entry-info.selected:hover {
-    background-color: #938977;
+    background-color: var(--item2-selected-hover-bg-color);
 }
 
 .entry-info.selected .entry-date {
-    color: #fff8f0;
+    color: var(--text1-selected-text-color);
 }
 
 .entry-info.selected .mood {
-    color: #fff8f0;
+    color: var(--item1-selected-text-color);
 }
 
 .delete-entry {
-    background-color: #fff8f0;
+    background-color: var(--item2-bg-color);
     display: block;
     align-self: stretch;
 
@@ -166,7 +166,7 @@ p {
 }
 
 .delete-entry:hover {
-    background-color: #938977;
+    background-color: var(--item2-hover-bg-color);
 }
 
 .delete-entry svg {
@@ -178,7 +178,6 @@ p {
 
 .delete-entry:hover svg {
     fill: #fff8f0;
-    transform: scale(1.1);
 }
 
 #add-entry {
@@ -195,14 +194,14 @@ p {
 }
 
 #diary-list::-webkit-scrollbar-track {
-    background-color: #f8f0e6;
+    background-color: var(--scroll1-track-bg-color);
     border-radius: 10px;
 }
 
 #diary-list::-webkit-scrollbar-thumb {
-    background-color: #b89c84;
+    background-color: var(--scroll1-thumb-bg-color);
     border-radius: 10px;
-    border: 3px solid #f8f0e6;
+    border: 3px solid var(--scroll1-thumb-border-color);
 }
 
 #diary-list::-webkit-scrollbar {
@@ -210,7 +209,7 @@ p {
 }
 
 #diary-list::-webkit-scrollbar-thumb:hover {
-    background-color: #a38270;
+    background-color: var(--scroll1-thumb-hover-bg-color);
 }
 
 #diary-edit-section {
@@ -221,7 +220,7 @@ p {
     display: flex;
     flex-direction: column;
 
-    background-color: #fff8f0;
+    background-color: var(--item2-bg-color);
     border-radius: 10px;
     padding: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -232,7 +231,7 @@ p {
 #edit-date {
     width: 100%;
     margin-bottom: 10px;
-    border: 1px solid #ccc;
+    border: 1px solid var(--field1-border-color);
     border-radius: 5px;
     box-sizing: border-box;
 }
@@ -252,28 +251,31 @@ p {
 
 .mood-option {
     padding: 5px 10px;
-    border: 1px solid #ccc;
+    border: 1px solid var(--button2-border-color);
     border-radius: 5px;
-    background-color: #e7dfd5;
+    background-color: var(--button2-bg-color);
+    color: var(--button2-text-color);
     cursor: pointer;
     transition: all 0.2s;
     transition-property: background-color, color;
 }
 
 .mood-option.selected {
-    background-color: #b89c84;
-    border: 1px solid #a38270;
-    color: white;
+    color: var(--button2-selected-text-color);
+    background-color: var(--button2-selected-bg-color);
+    border-color: var(--button2-selected-border-color);
 }
 
 .mood-option:hover {
-    background-color: #a38270;
+    color: var(--button2-hover-text-color);
+    background-color: var(--button2-hover-bg-color);
+    border-color: var(--button2-hover-border-color);
 }
 
 #edit-note {
     width: 100%;
     margin-bottom: 10px;
-    border: 1px solid #ccc;
+    border: 1px solid var(--field1-border-color);
     border-radius: 5px;
     box-sizing: border-box;
 
@@ -288,18 +290,18 @@ p {
     box-sizing: border-box;
 }
 
-#save-entry {
-    display: block;
-    width: 100%;
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    background-color: #b89c84;
-    color: white;
-    cursor: pointer;
-    transition: background-color 0.2s;
-}
+/*#save-entry {*/
+/*    display: block;*/
+/*    width: 100%;*/
+/*    padding: 10px;*/
+/*    border: none;*/
+/*    border-radius: 5px;*/
+/*    background-color: #b89c84;*/
+/*    color: white;*/
+/*    cursor: pointer;*/
+/*    transition: background-color 0.2s;*/
+/*}*/
 
-#save-entry:hover {
-    background-color: #a38270;
-}
+/*#save-entry:hover {*/
+/*    background-color: #a38270;*/
+/*}*/

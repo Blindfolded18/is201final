@@ -3,8 +3,9 @@ body {
 }
 
 button {
-    background-color: #ccc4bc;
-    border: 1px solid #d3c1ae;
+    background-color: var(--button1-bg-color);
+    border: 1px solid var(--button1-border-color);
+    color: var(--button1-text-color);
     text-align: center;
     font-weight: bold;
 
@@ -13,7 +14,70 @@ button {
 }
 
 button:hover {
-    background-color: #938977;
-    border-color: #938977;
-    color: #fff;
+    background-color: var(--button1-hover-bg-color);
+    border-color: var(--button1-hover-border-color);
+    color: var(--button1-hover-text-color);
+}
+
+:root {
+    --button1-bg-color: #ccc4bc;
+    --button1-border-color: #d3c1ae;
+    --button1-text-color: black;
+    --button1-hover-bg-color: #938977;
+    --button1-hover-border-color: #938977;
+    --button1-hover-text-color: white;
+
+    --button2-bg-color: #e7dfd5;
+    --button2-border-color: #d3c1ae;
+    --button2-text-color: black;
+    --button2-hover-bg-color:#938977;
+    --button2-hover-border-color: #938977;
+    --button2-hover-text-color: white;
+    --button2-selected-bg-color: #b89c84;
+    --button2-selected-border-color: #a38270;
+    --button2-selected-text-color: white;
+
+    --button3-text-color: #5d483d;
+    --button3-hover-bg-color: #5d483d;
+    --button3-hover-text-color: #fff8f0;
+
+    --section1-border-color: black;
+
+    --text1-text-color: #5d483d;
+    --text1-selected-text-color: #fff8f0;
+
+    --text2-text-color: #333;
+
+    --item1-border-color: #d3c1ae;
+    --item1-text-color: #5d483d;
+    --item1-selected-text-color: #fff8f0;
+
+    --item2-bg-color: #fff8f0;
+    --item2-hover-bg-color: #938977;
+    --item2-selected-bg-color: #b89c84;
+    --item2-selected-hover-bg-color: #938977;
+
+    --svg1-fill-color: #98816e;
+    --svg1-hover-fill-color: #fff8f0;
+
+    --bar-bg-color: #fff8f0;
+    --bar-text-color: #5d483d;
+
+    --scroll1-track-bg-color: #f8f0e6;
+    --scroll1-thumb-bg-color: #b89c84;
+    --scroll1-thumb-border-color: #f8f0e6;
+    --scroll1-thumb-hover-bg-color: #a38270;
+
+    --field1-border-color: #ccc;
+}
+
+.dark-theme {
+    --button1-bg-color: #4E4E4E;
+    --button1-border-color: #626262;
+    --button1-text-color: #E0E0E0;
+    --button1-hover-bg-color: #373737;
+    --button1-hover-border-color: #525252;
+    --button1-hover-text-color: #FFFFFF;
+
+    /* todo: button2 */
 }

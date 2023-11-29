@@ -20,7 +20,7 @@ body {
 }
 
 .auth-form {
-    background-color: #fff8f0;
+    background-color: var(--item2-bg-color);
     border-radius: 10px;
     padding: 25px;
     width: 300px;
@@ -39,13 +39,13 @@ body {
 .form-field label {
     display: block;
     margin-bottom: 5px;
-    color: #333;
+    color: var(--text2-text-color);
 }
 
 .form-field input {
     width: 100%;
     padding: 10px;
-    border: 1px solid #ccc;
+    border: 1px solid var(--field1-border-color);
     border-radius: 5px;
     box-sizing: border-box;
 }
