@@ -41,6 +41,7 @@ class DiaryEntry {
 class EntryManager {
     diaryEntries = [];
     currentEntry = null;
+    draggedEntry = null;
 
     removeEntry(entry) {
         // Maybe code related to database
@@ -58,6 +59,26 @@ class EntryManager {
         }
         return false;
     }
+
+    // dragEntry(droppedEntry) {
+    //     let draggedI = this.diaryEntries.indexOf(this.draggedEntry);
+    //     let droppedI = this.diaryEntries.indexOf(droppedEntry);
+    //
+    //     document.querySelector("title").textContent = `${draggedI}, ${droppedI}, ${this.diaryEntries.length}`;
+    //
+    //     droppedEntry.after(this.draggedEntry);
+    //
+    //     this.diaryEntries.splice(draggedI, 1);
+    //
+    //     // Adjust the droppedIndex in case the element is moved forward in the array
+    //     if (draggedI < droppedI) {
+    //         droppedI--;
+    //     }
+    //
+    //     // Insert the dragged entry at the new position
+    //     this.diaryEntries.splice(droppedI + 1, 0, this.draggedEntry);
+    //
+    // }
 }
 
 function dateToVerbose(date) {
@@ -149,6 +170,45 @@ addEntryElem.addEventListener("click", () => {
     }
     diaryListElem.insertBefore(diaryEntryElem, addEntryElem);
 
+    // drag functionality
+    diaryEntryElem.draggable = true;
+
+    diaryEntryElem.addEventListener('dragstart', (e) => {
+        e.dataTransfer.setData('text/plain', e.target.id);
+        e.target.classList.add('dragging');
+    });
+
+    diaryEntryElem.addEventListener('dragend', (e) => {
+        e.target.classList.remove('dragging');
+    });
+
+    diaryListElem.addEventListener('dragover', (e) => {
+        e.preventDefault(); // Necessary to allow dropping
+        const afterElement = getDragAfterElement(diaryListElem, e.clientY);
+        const draggable = document.querySelector('.dragging');
+        if (afterElement == null || afterElement.id === 'add-entry') {
+            diaryListElem.insertBefore(draggable, addEntryElem);
+        } else {
+            diaryListElem.insertBefore(draggable, afterElement);
+        }
+    });
+
+    function getDragAfterElement(container, y) {
+        const draggableElements = [...container.querySelectorAll('.diary-entry:not(.dragging)')];
+
+        return draggableElements.reduce((closest, child) => {
+            const box = child.getBoundingClientRect();
+            const offset = y - box.top - box.height / 2;
+            if (offset < 0 && offset > closest.offset) {
+                return { offset: offset, element: child };
+            } else {
+                return closest;
+            }
+        }, { offset: Number.NEGATIVE_INFINITY }).element;
+    }
+
+
+    // end
     entryManager.diaryEntries.push(diaryEntry);
 });
 
