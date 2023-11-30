@@ -6,6 +6,8 @@ const addEntryElem = document.querySelector("#add-entry");
 const diaryEditElem = document.querySelector("#diary-edit");
 const editDateInnerElem = document.querySelector("#edit-date input");
 const editNoteInnerElem = document.querySelector("#edit-note textarea");
+const logoutElem = document.querySelector("#logout");
+
 moods.forEach((mood, i, moods) => {
     const moodOptionElem = document.createElement("button");
     moodOptionElem.classList.add("mood-option");
@@ -190,3 +192,11 @@ moods
 editNoteInnerElem.addEventListener("change", () => {
     entryManager.currentEntry.note = editNoteInnerElem.value;
 });
+
+logoutElem.addEventListener("click", () => {
+    if (!confirm("Are you sure to logout?")) {
+        return;
+    }
+
+    location.href = "login.html";
+})

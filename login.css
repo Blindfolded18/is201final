@@ -3,8 +3,17 @@ html {
     background-size: cover;
 }
 
+#the-below {
+    height: calc(95vh - 20px - max(2em, 1em + 10px));
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 .auth-container {
     display: flex;
+    flex: auto;
     justify-content: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     border-radius: 10px;

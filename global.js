@@ -1,5 +1,5 @@
 const DARK_THEME_KEY = "dark-theme";
-const settingsButton = document.querySelector('#setting');
+const toggleThemeElem = document.querySelector('#toggle-theme');
 
 function updateTheme() {
     document.querySelectorAll("*")
@@ -17,7 +17,7 @@ function updateTheme() {
             "url('asset/index-bg-dark.jpg')";
 }
 
-settingsButton.addEventListener('click', () => {
+toggleThemeElem.addEventListener('click', () => {
     if (sessionStorage.getItem(DARK_THEME_KEY) === null) {
         sessionStorage.setItem(DARK_THEME_KEY, "");
     } else {

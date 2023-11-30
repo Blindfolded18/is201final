@@ -32,14 +32,14 @@ html {
 
     margin: 10px;
 
-    /*border: 100px var(--section1-border-color);*/
     border-radius: 10px;
     box-sizing: border-box;
-    overflow-y: scroll;
+    overflow-y: auto;
 }
 
 #diary-list {
     width: 30%;
+    overflow-y: scroll;
 }
 
 .entry-date {
