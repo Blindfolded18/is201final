@@ -10,6 +10,11 @@ function updateTheme() {
                 elem.classList.add("dark-theme");
             }
         });
+
+    document.documentElement.style.backgroundImage =
+        sessionStorage.getItem(DARK_THEME_KEY) === null ?
+            "url('asset/index-bg.jpg')" :
+            "url('asset/index-bg-dark.jpg')";
 }
 
 settingsButton.addEventListener('click', () => {
