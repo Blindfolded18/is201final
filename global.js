@@ -1,5 +1,6 @@
 const DARK_THEME_KEY = "dark-theme";
 const toggleThemeElem = document.querySelector('#toggle-theme');
+const aboutElem = document.querySelector("#about")
 
 function updateTheme() {
     document.querySelectorAll("*")
@@ -28,3 +29,7 @@ toggleThemeElem.addEventListener('click', () => {
 });
 
 updateTheme();
+
+aboutElem.addEventListener("click", () => {
+    alert("Preview product. Version: 0.0.2");
+})
