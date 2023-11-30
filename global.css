@@ -1,5 +1,7 @@
 body {
     font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
 button {
@@ -17,6 +19,43 @@ button:hover {
     background-color: var(--button1-hover-bg-color);
     border-color: var(--button1-hover-border-color);
     color: var(--button1-hover-text-color);
+}
+
+p {
+    margin: 0;
+    padding: 0;
+}
+
+#bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--bar-bg-color);
+    color: var(--bar-text-color);
+    padding: 10px 20px;
+}
+
+#utilities {
+    display: flex;
+    align-items: center;
+}
+
+.utility {
+    color: var(--button3-text-color);
+    background-color: initial;
+    font-size: initial;
+    font-weight: initial;
+    border: initial;
+    margin: 0 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    transition-property: background-color, color;
+}
+
+.utility:hover {
+    background-color: var(--button3-hover-bg-color);
+    color: var(--button3-hover-text-color);
 }
 
 :root {
@@ -40,6 +79,9 @@ button:hover {
     --button3-text-color: #5d483d;
     --button3-hover-bg-color: #5d483d;
     --button3-hover-text-color: #fff8f0;
+
+    --button4-text-color: black;
+    --button4-hover-text-color: #FFF;
 
     --section1-border-color: black;
 
@@ -69,6 +111,10 @@ button:hover {
     --scroll1-thumb-hover-bg-color: #a38270;
 
     --field1-border-color: #ccc;
+
+    --field2-border-color: #ccc;
+    --field2-text-color: initial;
+    --field2-bg-color: white;
 }
 
 .dark-theme {
@@ -77,7 +123,52 @@ button:hover {
     --button1-text-color: #E0E0E0;
     --button1-hover-bg-color: #373737;
     --button1-hover-border-color: #525252;
-    --button1-hover-text-color: #FFFFFF;
+    --button1-hover-text-color: #FFF;
 
-    /* todo: button2 */
+    --button2-bg-color: #5A5A5A;
+    --button2-border-color: #6E6E6E;
+    --button2-text-color: #E0E0E0;
+    --button2-hover-bg-color: #424242;
+    --button2-hover-border-color: #5C5C5C;
+    --button2-hover-text-color: #FFF;
+    --button2-selected-bg-color: #333333;
+    --button2-selected-border-color: #474747;
+    --button2-selected-text-color: #FFF;
+
+    --button3-text-color: #D3D3D3;
+    --button3-hover-bg-color: #333333;
+    --button3-hover-text-color: #FFF;
+
+    --section1-border-color: #E0E0E0;
+
+    --text1-text-color: #D3D3D3;
+    --text1-selected-text-color: #D3D3D3;
+
+    --text2-text-color: #CCC;
+
+    --item1-border-color: #626262;
+    --item1-text-color: #D3D3D3;
+    --item1-selected-text-color: #FFF;
+
+    --item2-bg-color: #333333;
+    --item2-hover-bg-color: #424242;
+    --item2-selected-bg-color: #4E4E4E;
+    --item2-selected-hover-bg-color: #444444;
+
+    --svg1-fill-color: #E0E0E0;
+    --svg1-hover-fill-color: #E0E0E0;
+
+    --bar-bg-color: #333333;
+    --bar-text-color: #D3D3D3;
+
+    --scroll1-track-bg-color: #4E4E4E;
+    --scroll1-thumb-bg-color: #727272;
+    --scroll1-thumb-border-color: #4E4E4E;
+    --scroll1-thumb-hover-bg-color: #606060;
+
+    --field1-border-color: #525252;
+
+    --field2-border-color: #E0E0E0;
+    --field2-text-color: #E0E0E0;
+    --field2-bg-color: #525252;
 }

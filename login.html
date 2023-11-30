@@ -6,8 +6,19 @@
     <link rel="stylesheet" href="login.css">
     <link rel="stylesheet" href="global.css">
     <script src="login.js" defer></script>
+    <script src="global.js" defer></script>
 </head>
 <body>
+<div id="bar">
+    <div id="user-info">
+        <img id="user-avatar" src="asset/example-avatar.jpeg" alt="user-avatar" hidden="hidden">
+        <span id="username"></span>
+    </div>
+    <div id="utilities">
+        <button id="setting" class="utility">Toggle Theme</button>
+        <button id="about" class="utility">About</button>
+    </div>
+</div>
 <div class="auth-container">
     <form class="auth-form" id="login-form">
         <div class="form-field">

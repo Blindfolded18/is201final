@@ -2,15 +2,6 @@ html {
     background-image: url("asset/index-bg.jpg");
 }
 
-body {
-    font-family: 'Arial', sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-}
-
 .auth-container {
     display: flex;
     justify-content: center;
@@ -56,12 +47,17 @@ body {
 }
 
 .toggle-password {
+    color: var(--button4-text-color);
     position: absolute;
     right: 10px;
     top: 30px;
     border: none;
     background: transparent;
     cursor: pointer;
+}
+
+.toggle-password:hover {
+    color: var(--button4-hover-text-color);
 }
 
 .auth-button {

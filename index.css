@@ -3,25 +3,6 @@ html {
     background-size: cover;
 }
 
-body {
-    margin: 0;
-    padding: 0;
-}
-
-p {
-    margin: 0;
-    padding: 0;
-}
-
-#bar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: var(--bar-bg-color);
-    color: var(--bar-text-color);
-    padding: 10px 20px;
-}
-
 #user-info {
     display: flex;
     align-items: center;
@@ -38,29 +19,6 @@ p {
     font-weight: bold;
 }
 
-#utilities {
-    display: flex;
-    align-items: center;
-}
-
-.utility {
-    color: var(--button3-text-color);
-    background-color: initial;
-    font-size: initial;
-    font-weight: initial;
-    border: initial;
-    margin: 0 5px;
-    padding: 5px 10px;
-    cursor: pointer;
-    transition: all 0.2s ease;
-    transition-property: background-color, color;
-}
-
-.utility:hover {
-    background-color: var(--button3-hover-bg-color);
-    color: var(--button3-hover-text-color);
-}
-
 #diary {
     height: calc(95vh - 20px - max(2em, 1em + 10px));
 
@@ -74,7 +32,7 @@ p {
 
     margin: 10px;
 
-    border: 100px var(--section1-border-color);
+    /*border: 100px var(--section1-border-color);*/
     border-radius: 10px;
     box-sizing: border-box;
     overflow-y: scroll;
@@ -170,14 +128,14 @@ p {
 }
 
 .delete-entry svg {
-    fill: #98816e;
+    fill: var(--svg1-fill-color);
 
     transition: transform 0.2s;
     transition-property: background-color;
 }
 
 .delete-entry:hover svg {
-    fill: #fff8f0;
+    fill: var(--svg1-hover-fill-color);
 }
 
 #add-entry {
@@ -231,12 +189,14 @@ p {
 #edit-date {
     width: 100%;
     margin-bottom: 10px;
-    border: 1px solid var(--field1-border-color);
+    border: 1px solid var(--field2-border-color);
     border-radius: 5px;
     box-sizing: border-box;
 }
 
 #edit-date input {
+    background-color: var(--field2-bg-color);
+    color: var(--field2-text-color);
     width: calc(100% - 20px);
     padding: 8px;
 }
@@ -275,7 +235,7 @@ p {
 #edit-note {
     width: 100%;
     margin-bottom: 10px;
-    border: 1px solid var(--field1-border-color);
+    border: 1px solid var(--field2-border-color);
     border-radius: 5px;
     box-sizing: border-box;
 
@@ -283,6 +243,8 @@ p {
 }
 
 #edit-note textarea {
+    background-color: var(--field2-bg-color);
+    color: var(--field2-text-color);
     height: 100%;
     width: 100%;
     padding: 8px;
