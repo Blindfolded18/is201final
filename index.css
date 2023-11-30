@@ -151,22 +151,22 @@ html {
     margin-right: 5px;
 }
 
-#diary-list::-webkit-scrollbar-track {
+.scroll-setting::-webkit-scrollbar-track {
     background-color: var(--scroll1-track-bg-color);
     border-radius: 10px;
 }
 
-#diary-list::-webkit-scrollbar-thumb {
+.scroll-setting::-webkit-scrollbar-thumb {
     background-color: var(--scroll1-thumb-bg-color);
     border-radius: 10px;
     border: 3px solid var(--scroll1-thumb-border-color);
 }
 
-#diary-list::-webkit-scrollbar {
+.scroll-setting::-webkit-scrollbar {
     width: 12px;
 }
 
-#diary-list::-webkit-scrollbar-thumb:hover {
+.scroll-setting::-webkit-scrollbar-thumb:hover {
     background-color: var(--scroll1-thumb-hover-bg-color);
 }
 
